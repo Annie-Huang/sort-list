@@ -3,3 +3,8 @@
 
 PS C:\tmp> npx create-react-app sort-list --template typescript --use-npm
 PS C:\tmp\sort-list> npm install json-server
+
+
+
+How to run the program:
+PS C:\tmp\sort-list> npm run db     << this will serve the data.json in http://localhost:4000/results
