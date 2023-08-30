@@ -3,8 +3,12 @@
 
 PS C:\tmp> npx create-react-app sort-list --template typescript --use-npm
 PS C:\tmp\sort-list> npm install json-server
+PS C:\tmp\sort-list> npm install styled-components
 
+Teach stack:
+react | styled component
 
 
 How to run the program:
-PS C:\tmp\sort-list> npm run db     << this will serve the data.json in http://localhost:4000/results
+PS C:\tmp\sort-list> npm run db         << this will serve the data.json in http://localhost:4000/results
+PS C:\tmp\sort-list> npm run start      << start up dev server in http://localhost:3000/
