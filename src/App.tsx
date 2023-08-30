@@ -1,12 +1,6 @@
 import React from 'react';
-import './App.css';
+import { Container } from './App.styles';
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+export default function App() {
+  return <Container>ABC</Container>;
 }
-
-export default App;
