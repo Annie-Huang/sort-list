@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from './App.styles';
-import { HotelList } from './components/HotelList';
-import { Hotel } from './components/HotelList/HotelList';
+import { HotelList, HotelData } from './components/HotelList';
 
 export default function App() {
-  const [hotelList, setHotelList] = useState<Hotel[]>([]);
+  const [hotelList, setHotelList] = useState<HotelData[]>([]);
   useEffect(() => {
     fetch('http://localhost:4000/results')
       .then((response) => response.json())
