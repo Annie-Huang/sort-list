@@ -5,9 +5,10 @@ PS C:\tmp> npx create-react-app sort-list --template typescript --use-npm
 PS C:\tmp\sort-list> npm install json-server
 PS C:\tmp\sort-list> npm install styled-components
 PS C:\tmp\sort-list> npm install --save-dev babel-plugin-styled-components
+PS C:\tmp\sort-list> npm install @mui/material @emotion/react @emotion/styled
 
 Teach stack:
-react | styled component
+react | styled component | material ui
 
 
 How to run the program:
