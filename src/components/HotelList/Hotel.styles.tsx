@@ -23,6 +23,12 @@ export const HotelInfo = styled.div`
 
 export const Heading = styled.h2`
   margin-top: var(--spacing);
+
+  // Make the ... ellipsis when it reaches certain size
+  width: 414px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const Address = styled.address`
