@@ -6,9 +6,10 @@ PS C:\tmp\sort-list> npm install json-server
 PS C:\tmp\sort-list> npm install styled-components
 PS C:\tmp\sort-list> npm install --save-dev babel-plugin-styled-components
 PS C:\tmp\sort-list> npm install @mui/material @emotion/react @emotion/styled
+PS C:\tmp\sort-list> npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 
 Teach stack:
-react | styled component | material ui
+react | styled component | material ui | material ui icon
 
 
 How to run the program:
