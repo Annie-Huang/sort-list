@@ -1,12 +1,15 @@
 import { FC } from 'react';
 import {
   Address,
+  DisplayPrice,
   Heading,
   HotelInfo,
+  HotelPrice,
   HotelWrapper,
   Image,
   Link,
   Note,
+  Savings,
 } from './Hotel.styles';
 
 export interface HotelData {
@@ -47,7 +50,7 @@ export interface HotelData {
 
 export const Hotel: FC<HotelData> = ({ property, offer }) => {
   const { address, title, previewImage } = property;
-  const { name, cancellationOption } = offer;
+  const { name, cancellationOption, displayPrice, savings } = offer;
   return (
     <HotelWrapper>
       <Image src={previewImage.url} alt={previewImage.caption} />
@@ -61,7 +64,14 @@ export const Hotel: FC<HotelData> = ({ property, offer }) => {
           <Note>Free cancellation</Note>
         )}
       </HotelInfo>
-      <div>abd</div>
+      <HotelPrice>
+        <div>1 night total (AUD)</div>
+        <DisplayPrice>
+          <span>$</span>
+          {displayPrice.amount}
+        </DisplayPrice>
+        {savings && <Savings>Save ${savings.amount}~</Savings>}
+      </HotelPrice>
     </HotelWrapper>
   );
 };

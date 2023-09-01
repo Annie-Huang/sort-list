@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const HotelWrapper = styled.li`
-  margin: 10px 0;
+  --spacing: 10px;
+  margin: var(--spacing) 0;
   display: flex;
 `;
 
@@ -9,10 +10,11 @@ export const Image = styled.img`
   width: 200px;
   aspect-ratio: 1;
   margin-right: 20px;
+  padding-bottom: var(--spacing);
 `;
 
 export const HotelInfo = styled.div`
-  border: 1px solid pink;
+  border-bottom: 1px solid lightgray;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,7 +22,7 @@ export const HotelInfo = styled.div`
 `;
 
 export const Heading = styled.h2`
-  margin-top: 10px;
+  margin-top: var(--spacing);
 `;
 
 export const Address = styled.address`
@@ -35,4 +37,30 @@ export const Link = styled.a`
 
 export const Note = styled.div`
   color: green;
+  margin-bottom: calc(var(--spacing) / 2);
+`;
+
+export const HotelPrice = styled.div`
+  border-bottom: 1px solid lightgray;
+  white-space: nowrap;
+  text-align: end;
+  padding-top: 40px;
+`;
+
+export const DisplayPrice = styled.div`
+  font-size: 35px;
+  display: flex;
+  justify-content: end;
+
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 3px;
+  }
+`;
+
+export const Savings = styled.div`
+  color: red;
+  padding-top: 5px;
+  font-size: 18px;
 `;
