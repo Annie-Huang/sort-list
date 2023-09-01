@@ -1,8 +1,10 @@
+import { Rating } from '@mui/material';
 import { FC } from 'react';
 import {
   Address,
   DisplayPrice,
   Heading,
+  Headline,
   HotelInfo,
   HotelPrice,
   HotelWrapper,
@@ -49,14 +51,22 @@ export interface HotelData {
 }
 
 export const Hotel: FC<HotelData> = ({ property, offer }) => {
-  const { address, title, previewImage } = property;
+  const { address, title, previewImage, rating } = property;
   const { name, cancellationOption, displayPrice, savings } = offer;
   return (
     <HotelWrapper>
       <Image src={previewImage.url} alt={previewImage.caption} />
       <HotelInfo>
         <div>
-          <Heading>{title}</Heading>
+          <Headline>
+            <Heading>{title}</Heading>
+            <Rating
+              name='read-only'
+              value={rating.ratingValue}
+              precision={0.5}
+              readOnly
+            />
+          </Headline>
           <Address>{address.join('. ')}</Address>
           <Link href='#'>{name}</Link>
         </div>

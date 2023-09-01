@@ -21,11 +21,19 @@ export const HotelInfo = styled.div`
   justify-content: space-between;
 `;
 
+export const Headline = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing);
+`;
+
 export const Heading = styled.h2`
   margin-top: var(--spacing);
 
   // Make the ... ellipsis when it reaches certain size
-  width: 414px;
+  // Use max-width instead of min-width because we need to make rating component next to the text when it is short
+  // width: 414px;
+  max-width: 414px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
