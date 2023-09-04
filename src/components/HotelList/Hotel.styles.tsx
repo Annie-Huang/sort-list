@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
 export const HotelWrapper = styled.li`
-  --spacing: 10px;
   margin: var(--spacing) 0;
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
-  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2) 0;
 
   @media (min-width: 768px) {
     flex-direction: row;
-    padding: 0 calc(var(--spacing) * 2);
     gap: 0;
   }
 `;
