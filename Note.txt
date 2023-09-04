@@ -20,3 +20,17 @@ What Have I done:
 - Layout of the card
 - Use Material UI Rating component for self and star rating.
 - Mobile vs Tablets vs Desktop views
+
+
+TODO:
+- Add unit test.
+- Add dropdown component.
+- Add sorting logic.
+
+If this is a prod production:
+- Need another location to storage the images
+- Need Loading state while we are waiting for the api.
+- Need Error state while the api call failed.
+- The 'Sydney' keyword from 'X hotels in Sydney' should come from the api returns
+- Would probably persuade designer put all the pricing info (last collumn) in the center in y-axes.
+- Create mobile/tablets/desktop util rather than hardcode screen size value
