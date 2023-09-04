@@ -22,3 +22,13 @@ export const Container = styled.div`
     max-width: 1440px;
   }
 `;
+
+export const Logo = styled.img`
+  width: 103px;
+  height: 20px;
+
+  @media (min-width: 768px) {
+    width: 206px;
+    height: 40px;
+  }
+`;
