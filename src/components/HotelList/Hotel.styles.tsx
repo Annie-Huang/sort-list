@@ -9,6 +9,11 @@ export const HotelWrapper = styled.li`
   @media (min-width: 768px) {
     flex-direction: row;
     gap: 0;
+
+    // Make the first element lightgray border-top.
+    &:first-of-type > div {
+      border-top: 1px solid lightgray;
+    }
   }
 `;
 
