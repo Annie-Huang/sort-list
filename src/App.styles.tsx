@@ -32,3 +32,10 @@ export const Logo = styled.img`
     height: 40px;
   }
 `;
+
+export const Summary = styled.div`
+  font-size: 1.2em;
+  padding-block: var(--spacing);
+  display: flex;
+  justify-content: space-between;
+`;

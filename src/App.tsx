@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Logo } from './App.styles';
+import { Container, Logo, Summary } from './App.styles';
 import { HotelList, HotelData } from './components/HotelList';
 
 export default function App() {
@@ -13,7 +13,17 @@ export default function App() {
 
   return (
     <Container>
-      <Logo src='./qantas-logo.png' alt='' />
+      <Logo src='./qantas-logo.png' alt='qantas logo' />
+      <Summary>
+        <div>
+          <strong>{hotelList.length}</strong>
+          <i> hotels in </i>
+          <strong>Sydney.</strong>
+        </div>
+        <div>
+          <strong>Sort by </strong>
+        </div>
+      </Summary>
       <HotelList data={hotelList} />
     </Container>
   );
