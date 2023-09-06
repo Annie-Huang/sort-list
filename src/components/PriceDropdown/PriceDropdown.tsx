@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Form, Select } from './PriceDropdown.styles';
 
 export interface PriceDropdownProps {
   selectedOption: PricingSortingOption;
@@ -12,11 +13,11 @@ export const PriceDropdown: FC<PriceDropdownProps> = ({
   onOptionSelect,
 }) => {
   return (
-    <form>
-      <label htmlFor='price-dropdown' style={{ marginRight: '10px' }}>
+    <Form>
+      <label htmlFor='price-dropdown'>
         <strong>Sort by </strong>
       </label>
-      <select
+      <Select
         name='price-dropdown'
         id='price-dropdown'
         value={selectedOption}
@@ -28,7 +29,7 @@ export const PriceDropdown: FC<PriceDropdownProps> = ({
         <option key='low-high' value='low-high'>
           Price low-high
         </option>
-      </select>
-    </form>
+      </Select>
+    </Form>
   );
 };
