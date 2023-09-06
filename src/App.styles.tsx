@@ -37,5 +37,11 @@ export const Summary = styled.div`
   font-size: 1.2em;
   padding-block: var(--spacing);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: var(--spacing);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
