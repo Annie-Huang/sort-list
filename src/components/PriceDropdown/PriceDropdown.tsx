@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { Form, Select } from './PriceDropdown.styles';
 
 export interface PriceDropdownProps {
-  selectedOption: PricingSortingOption;
+  selectedOption: PricingSortedBy;
   onOptionSelect: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-export type PricingSortingOption = 'high-low' | 'low-high';
+export type PricingSortedBy = 'high-low' | 'low-high';
 
 export const PriceDropdown: FC<PriceDropdownProps> = ({
   selectedOption,

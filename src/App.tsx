@@ -1,16 +1,11 @@
 import React, { ChangeEventHandler, useEffect, useState } from 'react';
 import { Container, Logo, Summary } from './App.styles';
 import { HotelList, HotelData } from './components/HotelList';
-import {
-  PriceDropdown,
-  PricingSortingOption,
-} from './components/PriceDropdown';
+import { PriceDropdown, PricingSortedBy } from './components/PriceDropdown';
 
 export default function App() {
   const [hotelList, setHotelList] = useState<HotelData[]>([]);
-  const [selectedOption, setSelectedOption] = useState<PricingSortingOption>(
-    'high-low'
-  );
+  const [sortedBy, setSortedBy] = useState<PricingSortedBy>('high-low');
 
   useEffect(() => {
     fetch('http://localhost:4000/results')
@@ -29,10 +24,8 @@ export default function App() {
           <strong>Sydney.</strong>
         </div>
         <PriceDropdown
-          selectedOption={selectedOption}
-          onOptionSelect={(e) =>
-            setSelectedOption(e.target.value as PricingSortingOption)
-          }
+          selectedOption={sortedBy}
+          onOptionSelect={(e) => setSortedBy(e.target.value as PricingSortedBy)}
         />
       </Summary>
       <HotelList data={hotelList} />
