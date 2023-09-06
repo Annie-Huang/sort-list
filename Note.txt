@@ -20,6 +20,7 @@ What Have I done:
 - Layout of the card
 - Use Material UI Rating component for self and star rating.
 - Mobile vs Tablets vs Desktop views
+- Keep default sorting as 'high-low' on landing (although I think it should be low to high). And design image doesn't make sense as it's not in sorted order for the hotel list.
 
 
 TODO:
