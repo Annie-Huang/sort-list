@@ -2,8 +2,18 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders landing page text', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByAltText('qantas logo')).toBeInTheDocument();
+
+  expect(
+    screen.getByRole('heading', {
+      name: 'Qantas hotels page',
+      level: 1,
+    })
+  ).toBeInTheDocument();
+
+  expect(screen.getByText('hotels in')).toBeInTheDocument();
+  expect(screen.getByText('Sydney.')).toBeInTheDocument();
 });
