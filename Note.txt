@@ -15,6 +15,7 @@ react | styled component | material ui | material ui icon
 How to run the program:
 PS C:\tmp\sort-list> npm run db         << this will serve the data.json in http://localhost:4000/results
 PS C:\tmp\sort-list> npm run start      << start up dev server in http://localhost:3000/
+PS C:\tmp\sort-list> npm run test       << run all the test
 
 What Have I done:
 - Layout of the card

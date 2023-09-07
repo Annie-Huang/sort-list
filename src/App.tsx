@@ -19,6 +19,8 @@ export default function App() {
   return (
     <Container>
       <Logo src='./qantas-logo.png' alt='qantas logo' />
+      {/* A page should have a h1 before using h2 (in HotelList component) for vision impaired users */}
+      <h1 className='sr-only'>Qantas hotels page</h1>
       <Summary>
         <div>
           <strong>{hotelList.length}</strong>
