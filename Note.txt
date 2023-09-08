@@ -23,7 +23,7 @@ What Have I done:
 - Mobile vs Tablets vs Desktop views
 - Add ellipsis to the hotel title when it gets too long in desktop version
 - Keep default sorting as 'high-low' on landing (although I think it should be low to high). And design image doesn't make sense as it's not in sorted order for the hotel list.
-- Add unit test for <PriceDropdown>, <App>, <Hotel>
+- Add unit test for <PriceDropdown>, <App>, <Hotel>, <Rating>
 - Create <h1> in the landing page for vision impaired users.
 
 TODO:

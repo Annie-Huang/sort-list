@@ -26,6 +26,7 @@ export const Rating: FC<RatingData> = ({ ratingValue, ratingType }) => {
     <>
       {ratingType === 'star' ? (
         <StyledRating
+          data-testid='star-rating'
           name='read-only'
           value={ratingValue}
           precision={0.5}
@@ -37,6 +38,7 @@ export const Rating: FC<RatingData> = ({ ratingValue, ratingType }) => {
         />
       ) : (
         <StyledRating
+          data-testid='self-rating'
           name='read-only'
           value={ratingValue}
           precision={0.5}
