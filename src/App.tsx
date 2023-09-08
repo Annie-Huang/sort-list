@@ -1,20 +1,40 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Logo, Summary } from './App.styles';
+import { Container, LoaderWrapper, Logo, Summary } from './App.styles';
 import { HotelList, HotelData } from './components/HotelList';
 import { PriceDropdown, PricingSortedBy } from './components/PriceDropdown';
 import { sortHotelListByPrice } from './App.utils';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function App() {
   const [hotelList, setHotelList] = useState<HotelData[]>([]);
   const [sortedBy, setSortedBy] = useState<PricingSortedBy>('high-low');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const sortedHotelList = sortHotelListByPrice(hotelList, sortedBy);
 
-  useEffect(() => {
-    fetch('http://localhost:4000/results')
+  const getData = async () => {
+    setIsLoading(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    await fetch('http://localhost:4000/results')
       .then((response) => response.json())
       .then((data) => setHotelList(data))
       .catch((error) => console.error(error));
+
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
+
+  if (isLoading) {
+    return (
+      <LoaderWrapper>
+        <CircularProgress size={80} />
+      </LoaderWrapper>
+    );
+  }
 
   return (
     <Container>

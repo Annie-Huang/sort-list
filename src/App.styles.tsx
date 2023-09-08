@@ -45,3 +45,9 @@ export const Summary = styled.div`
     justify-content: space-between;
   }
 `;
+
+export const LoaderWrapper = styled.div`
+  height: 100vh;
+  display: grid;
+  place-content: center;
+`;
