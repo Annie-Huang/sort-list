@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
-test('renders landing page text', () => {
+test('renders landing page text', async () => {
   render(<App />);
 
-  expect(screen.getByAltText('qantas logo')).toBeInTheDocument();
+  // Need to wait loading status to finish.
+  expect(await screen.findByAltText('qantas logo')).toBeInTheDocument();
 
   expect(
     screen.getByRole('heading', {
