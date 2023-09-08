@@ -25,13 +25,10 @@ What Have I done:
 - Keep default sorting as 'high-low' on landing (although I think it should be low to high). And design image doesn't make sense as it's not in sorted order for the hotel list.
 - Add unit test for <PriceDropdown>, <App>, <Hotel>, <Rating>, App.utils.ts.
 - Create <h1> in the landing page for vision impaired users.
-
-TODO:
-- Add unit test.
+- Add a loading state for fetching api call, mirror more closely to prod.
 
 If this is a prod production:
 - Need another location to storage the images
-- Need Loading state while we are waiting for the api.
 - Need Error state while the api call failed.
 - The 'Sydney' keyword from 'X hotels in Sydney' should come from the api returns
 - Would probably persuade designer put all the pricing info (last collumn) in the center in y-axes.
