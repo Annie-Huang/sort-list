@@ -15,6 +15,7 @@ test('renders landing page text', async () => {
     })
   ).toBeInTheDocument();
 
-  expect(screen.getByText('hotels in')).toBeInTheDocument();
-  expect(screen.getByText('Sydney.')).toBeInTheDocument();
+  expect(screen.getByTestId('summary-text')).toHaveTextContent(
+    '5 hotels in Sydney.'
+  );
 });
